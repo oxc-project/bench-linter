@@ -1,11 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>Boshen/renovate"],
-  "packageRules": [
-    {
-      "groupName": "npm packages",
-      "matchManagers": ["npm"],
-      "rangeStrategy": "bump"
-    }
-  ]
+  "extends": ["github>Boshen/renovate"]
 }
