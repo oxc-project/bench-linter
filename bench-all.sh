@@ -25,6 +25,17 @@ chmod +x bench.sh
 cd ..
 
 echo ""
+echo ""
+
+# Run Sentry benchmarks
+echo "Running Sentry benchmarks..."
+echo ""
+cd bench-sentry
+chmod +x bench.sh
+./bench.sh
+cd ..
+
+echo ""
 echo "============================================"
 echo "All benchmarks completed!"
 echo "============================================"

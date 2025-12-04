@@ -1,9 +1,5 @@
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * @satisfies {import('eslint').ESLint.ConfigData[]}
@@ -17,7 +13,6 @@ export default [
         languageOptions: {
             parser: tsParser,
             parserOptions: {
-                project: true,
                 projectService: {
                     // Why is this such a big lint?
                     // When using `projectService`, it traverses up the tree looking for a
@@ -86,6 +81,7 @@ export default [
             '@typescript-eslint/await-thenable': 'error',
             '@typescript-eslint/no-array-delete': 'error',
             '@typescript-eslint/no-base-to-string': 'error',
+            '@typescript-eslint/no-deprecated': 'error',
             '@typescript-eslint/no-duplicate-type-constituents': 'error',
             '@typescript-eslint/no-floating-promises': 'error',
             '@typescript-eslint/no-for-in-array': 'error',
