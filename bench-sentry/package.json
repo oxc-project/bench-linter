@@ -1,0 +1,7 @@
+{
+  "name": "bench-sentry",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "description": "Benchmark for Sentry codebase comparing Oxlint vs ESLint with type-aware linting"
+}

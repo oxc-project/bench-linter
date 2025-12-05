@@ -1,8 +1,10 @@
 # Benchmark for Oxc, Biome and ESLint
 
-This repository contains two separate benchmarks:
-- **bench-vscode**: Benchmarks on VSCode codebase with standard linting rules
-- **bench-vue**: Benchmarks on Vue Core codebase with type-aware linting rules
+This repository contains four separate benchmarks:
+
+-   **bench-vscode**: Benchmarks on VSCode codebase with standard linting rules
+-   **bench-vue**: Benchmarks on Vue Core codebase with type-aware linting rules
+-   **bench-sentry**: Benchmarks on Sentry codebase with type-aware linting rules
 
 ## Summary
 
@@ -13,8 +15,10 @@ Oxlint is ~2x faster than Biome.
 ## Setup
 
 Each benchmark is in its own directory:
-- [bench-vscode](./bench-vscode) - VSCode codebase benchmarks
-- [bench-vue](./bench-vue) - Vue Core codebase benchmarks
+
+-   [bench-vscode](./bench-vscode) - VSCode codebase benchmarks
+-   [bench-vue](./bench-vue) - Vue Core codebase benchmarks
+-   [bench-sentry](./bench-sentry) - Sentry codebase benchmarks (type-aware)
 
 ## VSCode Benchmark Results
 
@@ -163,7 +167,66 @@ Summary
 
 Oxlint with type-aware rules vs TypeScript ESLint on Vue Core codebase.
 
-(Benchmark results to be added after running)
+### MacBook Pro M2 Max 12 Cores (8 performance and 4 efficiency)
+
+```
+./bench.sh
+============================================
+Vue Core Benchmark - Type-Aware Rules
+============================================
+
+Oxlint vs TypeScript ESLint with type-aware rules
+-------------------------------------------
+Benchmark 1: oxc
+  Time (mean ± σ):      2.531 s ±  0.055 s    [User: 4.919 s, System: 0.588 s]
+  Range (min … max):    2.462 s …  2.648 s    10 runs
+
+  Warning: Ignoring non-zero exit code.
+
+Benchmark 2: eslint
+ ⠇ Performing warmup runs         ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ETA 00:00:00 ^R
+  Time (mean ± σ):     20.800 s ±  0.130 s    [User: 26.686 s, System: 3.096 s]
+  Range (min … max):   20.605 s … 21.055 s    10 runs
+
+  Warning: Ignoring non-zero exit code.
+
+Summary
+  oxc ran
+    8.22 ± 0.19 times faster than eslint
+```
+
+## Sentry Benchmark Results
+
+### Type-Aware Rules Performance
+
+Oxlint with type-aware rules vs TypeScript ESLint on Sentry codebase.
+
+### MacBook Pro M2 Max 12 Cores (8 performance and 4 efficiency)
+
+```
+./bench.sh
+============================================
+Sentry Benchmark - Type-Aware Linting
+============================================
+
+Oxlint vs TypeScript ESLint with type-aware rules
+-------------------------------------------
+Benchmark 1: oxc
+  Time (mean ± σ):      4.448 s ±  0.076 s    [User: 11.435 s, System: 2.521 s]
+  Range (min … max):    4.373 s …  4.555 s    10 runs
+
+  Warning: Ignoring non-zero exit code.
+
+Benchmark 2: eslint
+  Time (mean ± σ):     55.070 s ±  0.766 s    [User: 84.407 s, System: 9.776 s]
+  Range (min … max):   53.952 s … 56.260 s    10 runs
+
+  Warning: Ignoring non-zero exit code.
+
+Summary
+  oxc ran
+   12.38 ± 0.27 times faster than eslint
+```
 
 ## Run
 
@@ -180,13 +243,29 @@ Oxlint with type-aware rules vs TypeScript ESLint on Vue Core codebase.
 ### Run individual benchmarks
 
 #### VSCode benchmark
+
 ```bash
 cd bench-vscode
 ./bench.sh
 ```
 
 #### Vue benchmark
+
 ```bash
 cd bench-vue
+./bench.sh
+```
+
+#### Outline benchmark
+
+```bash
+cd bench-outline
+./bench.sh
+```
+
+#### Sentry benchmark
+
+```bash
+cd bench-sentry
 ./bench.sh
 ```

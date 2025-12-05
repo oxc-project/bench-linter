@@ -25,6 +25,14 @@ else
     echo "Vue Core repository already exists, skipping..."
 fi
 
+# Clone Sentry repository
+if [ ! -d "sentry" ]; then
+    echo "Cloning Sentry repository..."
+    git clone --depth=1 git@github.com:getsentry/sentry.git sentry
+else
+    echo "Sentry repository already exists, skipping..."
+fi
+
 popd
 
 # Install dependencies
@@ -47,3 +55,4 @@ echo "You can now run benchmarks with:"
 echo "  ./bench-all.sh    # Run all benchmarks"
 echo "  cd bench-vscode && ./bench.sh    # Run VSCode benchmark only"
 echo "  cd bench-vue && ./bench.sh       # Run Vue benchmark only"
+echo "  cd bench-sentry && ./bench.sh    # Run Sentry benchmark only"
