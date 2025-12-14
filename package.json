@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.25.0",
   "devDependencies": {
     "@biomejs/biome": "^2.3.8",
     "@typescript-eslint/eslint-plugin": "^8.48.0",
