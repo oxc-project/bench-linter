@@ -10,7 +10,7 @@
     "@typescript-eslint/parser": "^8.48.0",
     "eslint": "^9.39.1",
     "oxlint": "^1.30.0",
-    "oxlint-tsgolint": "^0.9.0",
+    "oxlint-tsgolint": "^0.10.0",
     "typescript": "^5.9.3"
   }
 }
