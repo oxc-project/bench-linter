@@ -8,7 +8,7 @@
     "@biomejs/biome": "^2.3.8",
     "@typescript-eslint/eslint-plugin": "^8.48.0",
     "@typescript-eslint/parser": "^8.48.0",
-    "eslint": "^9.39.1",
+    "eslint": "^10.0.0",
     "oxlint": "^1.30.0",
     "oxlint-tsgolint": "^0.13.0",
     "typescript": "^5.9.3"
