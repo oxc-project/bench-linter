@@ -1,12 +1,12 @@
-# VSCode Benchmark
+# VS Code Benchmark
 
-Benchmarks for linting the Microsoft VSCode codebase with standard JavaScript/TypeScript rules.
+Benchmarks for linting the Microsoft VS Code codebase with standard JavaScript/TypeScript rules.
 
 ## Setup
 
 ```bash
 # From the root directory
-../init.sh  # Clone VSCode repo and install dependencies
+../init.sh  # Clone VS Code repo and install dependencies
 ```
 
 ## Run Benchmark

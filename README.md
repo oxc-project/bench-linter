@@ -2,7 +2,7 @@
 
 This repository contains four separate benchmarks:
 
--   **bench-vscode**: Benchmarks on VSCode codebase with standard linting rules
+-   **bench-vscode**: Benchmarks on VS Code codebase with standard linting rules
 -   **bench-vue**: Benchmarks on Vue Core codebase with type-aware linting rules
 -   **bench-sentry**: Benchmarks on Sentry codebase with type-aware linting rules
 
@@ -16,11 +16,11 @@ Oxlint is ~2x faster than Biome.
 
 Each benchmark is in its own directory:
 
--   [bench-vscode](./bench-vscode) - VSCode codebase benchmarks
+-   [bench-vscode](./bench-vscode) - VS Code codebase benchmarks
 -   [bench-vue](./bench-vue) - Vue Core codebase benchmarks
 -   [bench-sentry](./bench-sentry) - Sentry codebase benchmarks (type-aware)
 
-## VSCode Benchmark Results
+## VS Code Benchmark Results
 
 ### Oxlint vs Biome
 
@@ -242,7 +242,7 @@ Summary
 
 ### Run individual benchmarks
 
-#### VSCode benchmark
+#### VS Code benchmark
 
 ```bash
 cd bench-vscode
