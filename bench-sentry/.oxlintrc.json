@@ -1,6 +1,8 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "categories": { "correctness": "off" },
+  "categories": {
+    "correctness": "off"
+  },
   "rules": {
     "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/consistent-type-exports": "error",
@@ -10,5 +12,9 @@
     "@typescript-eslint/no-unnecessary-type-assertion": "error",
     "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/no-meaningless-void-operator": "error"
+  },
+  "options": {
+    "typeAware": true,
+    "typeCheck": true
   }
 }
