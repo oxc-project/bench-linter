@@ -3,7 +3,7 @@
 VSCODE_TEST_DIR="../tmp/vscode/src"
 
 echo "============================================"
-echo "VSCode Benchmark"
+echo "VS Code Benchmark"
 echo "============================================"
 echo ""
 
