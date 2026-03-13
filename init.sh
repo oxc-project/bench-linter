@@ -9,12 +9,12 @@ echo ""
 mkdir -p tmp
 pushd tmp
 
-# Clone VSCode repository
+# Clone VS Code repository
 if [ ! -d "vscode" ]; then
-    echo "Cloning VSCode repository..."
+    echo "Cloning VS Code repository..."
     git clone --depth=1 git@github.com:microsoft/vscode.git
 else
-    echo "VSCode repository already exists, skipping..."
+    echo "VS Code repository already exists, skipping..."
 fi
 
 # Clone Vue Core repository
@@ -40,9 +40,9 @@ echo ""
 echo "Installing dependencies..."
 pnpm install
 
-# Clean up old eslint configs in VSCode
+# Clean up old eslint configs in VS Code
 echo ""
-echo "Cleaning up old ESLint configs in VSCode..."
+echo "Cleaning up old ESLint configs in VS Code..."
 rm -rf ./tmp/vscode/.eslintrc.json
 rm -rf ./tmp/vscode/**/.eslintrc.json
 
@@ -53,6 +53,6 @@ echo "============================================"
 echo ""
 echo "You can now run benchmarks with:"
 echo "  ./bench-all.sh    # Run all benchmarks"
-echo "  cd bench-vscode && ./bench.sh    # Run VSCode benchmark only"
+echo "  cd bench-vscode && ./bench.sh    # Run VS Code benchmark only"
 echo "  cd bench-vue && ./bench.sh       # Run Vue benchmark only"
 echo "  cd bench-sentry && ./bench.sh    # Run Sentry benchmark only"

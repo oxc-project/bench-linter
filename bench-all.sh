@@ -5,8 +5,8 @@ echo "Running All JavaScript Linter Benchmarks"
 echo "============================================"
 echo ""
 
-# Run VSCode benchmarks
-echo "Running VSCode benchmarks..."
+# Run VS Code benchmarks
+echo "Running VS Code benchmarks..."
 echo ""
 cd bench-vscode
 chmod +x bench.sh
