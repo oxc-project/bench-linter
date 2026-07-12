@@ -17,7 +17,7 @@ Benchmarks for linting the Vue.js Core codebase with type-aware TypeScript rules
 
 ## Benchmarks Included
 
-**Oxlint vs TypeScript ESLint** - Type-aware rules comparison
+**Oxlint vs TypeScript ESLint** - Type-aware rules comparison, with ESLint run both single-threaded (default) and multi-threaded (`--concurrency=auto`)
 
 ## Configuration Files
 

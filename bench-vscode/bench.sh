@@ -27,4 +27,5 @@ ESLINT="../node_modules/.bin/eslint -c eslint.config.mjs ${VSCODE_TEST_DIR}"
 hyperfine -w 1 -i \
   -n oxc "${OXC}" \
   -n oxc-single-thread "${OXC} --threads=1" \
-  -n eslint "${ESLINT}"
+  -n eslint "${ESLINT}" \
+  -n eslint-concurrency "${ESLINT} --concurrency=auto"
