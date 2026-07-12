@@ -18,7 +18,7 @@ Benchmarks for linting the Microsoft VS Code codebase with standard JavaScript/T
 ## Benchmarks Included
 
 1. **Oxlint vs Biome** - Single rule comparison (no-debugger)
-2. **Oxlint vs ESLint** - Full ruleset comparison with standard JS/TS rules
+2. **Oxlint vs ESLint** - Full ruleset comparison with standard JS/TS rules, with ESLint run both single-threaded (default) and multi-threaded (`--concurrency=auto`)
 
 ## Configuration Files
 

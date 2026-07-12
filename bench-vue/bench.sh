@@ -17,4 +17,5 @@ ESLINT="./node_modules/.bin/eslint -c bench-vue/eslint.config.mjs ${VUE_CORE_TES
 
 hyperfine -w 1 -i \
   -n oxc "${OXC}" \
-  -n eslint "${ESLINT}"
+  -n eslint "${ESLINT}" \
+  -n eslint-concurrency "${ESLINT} --concurrency=auto"
