@@ -36,6 +36,14 @@ chmod +x bench.sh
 cd ..
 
 echo ""
+echo ""
+
+# Run reporter benchmarks
+echo "Running oxlint reporter benchmarks..."
+echo ""
+./bench-reporter/bench.sh
+
+echo ""
 echo "============================================"
 echo "All benchmarks completed!"
 echo "============================================"

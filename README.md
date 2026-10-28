@@ -1,10 +1,11 @@
 # Benchmark for Oxc, Biome and ESLint
 
-This repository contains four separate benchmarks:
+This repository contains the following benchmarks:
 
 -   **bench-vscode**: Benchmarks on VS Code codebase with standard linting rules
 -   **bench-vue**: Benchmarks on Vue Core codebase with type-aware linting rules
 -   **bench-sentry**: Benchmarks on Sentry codebase with type-aware linting rules
+-   **bench-reporter**: Oxlint-only benchmark of diagnostic reporting speed with ~470k diagnostics on the VS Code codebase
 
 ## Summary
 
@@ -19,6 +20,7 @@ Each benchmark is in its own directory:
 -   [bench-vscode](./bench-vscode) - VS Code codebase benchmarks
 -   [bench-vue](./bench-vue) - Vue Core codebase benchmarks
 -   [bench-sentry](./bench-sentry) - Sentry codebase benchmarks (type-aware)
+-   [bench-reporter](./bench-reporter) - Oxlint reporter benchmarks (many diagnostics)
 
 ## VS Code Benchmark Results
 
@@ -268,6 +270,18 @@ cd bench-outline
 ```bash
 cd bench-sentry
 ./bench.sh
+```
+
+#### Reporter benchmark
+
+Runs `oxlint -A all -D restriction` on `tmp/vscode/src` (~470k diagnostics) with `-f unix`, `-f agent`
+and `-f json` (control). Use it to measure how fast oxlint prints diagnostics, which oxc's own benchmarks don't cover.
+
+```bash
+./bench-reporter/bench.sh
+
+# Compare two oxlint builds, e.g. oxc main vs a PR branch
+OXLINT=/path/to/oxlint-pr OXLINT_BASELINE=/path/to/oxlint-main ./bench-reporter/bench.sh
 ```
 
 # [Sponsored By](https://oxc.rs/sponsor)

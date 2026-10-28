@@ -39,3 +39,5 @@ jobs:
           test -x bench-all.sh
           test -x bench-vscode/bench.sh
           test -x bench-vue/bench.sh
+          test -x bench-sentry/bench.sh
+          test -x bench-reporter/bench.sh
