@@ -3,9 +3,8 @@
 # Measures how fast oxlint *reports* diagnostics when there are a lot of them.
 #
 # Most output formats (unix, github, stylish, checkstyle, junit, sarif, gitlab, agent)
-# compute line/column for every diagnostic. `-f json` is included as a control:
-# it lints the same files and emits the same diagnostics, so the gap between
-# `json` and the other formats is roughly the reporting cost.
+# compute line/column for every diagnostic through `oxc_diagnostics::reporter::Info`.
+# `-f json` takes a separate code path and is included as a reference point.
 #
 # Compare two oxlint builds (e.g. oxc `main` vs a PR branch):
 #   OXLINT=/path/to/oxlint-pr OXLINT_BASELINE=/path/to/oxlint-main ./bench-reporter/bench.sh

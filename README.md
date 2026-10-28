@@ -275,7 +275,7 @@ cd bench-sentry
 #### Reporter benchmark
 
 Runs `oxlint -A all -D restriction` on `tmp/vscode/src` (~470k diagnostics) with `-f unix`, `-f agent`
-and `-f json` (control). Use it to measure how fast oxlint prints diagnostics, which oxc's own benchmarks don't cover.
+and `-f json` (reference, separate code path). Use it to measure how fast oxlint prints diagnostics, which oxc's own benchmarks don't cover.
 
 ```bash
 ./bench-reporter/bench.sh
